@@ -26,7 +26,7 @@ use Sunnysideup\FrontendEditor\Api\FrontEndEditorPreviousAndNextProvider;
 
 
 
-class FrontEndEditorPageController extends PageController
+class FrontEndEditorPageController extends \PageController
 {
 
 
