@@ -22,7 +22,7 @@ use DataObjectOneFieldUpdateController;
 
 
 
-use bool;
+
 
 
 use Sunnysideup\FrontendEditor\Api\FrontEndEditorSessionManager;

@@ -6,7 +6,7 @@ namespace Sunnysideup\FrontendEditor\Control;
 
 
 
-use bool;
+
 
 use SilverStripe\Core\Convert;
 use SilverStripe\ORM\DataObject;

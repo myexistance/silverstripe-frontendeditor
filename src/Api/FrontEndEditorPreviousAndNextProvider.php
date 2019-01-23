@@ -8,10 +8,10 @@ namespace Sunnysideup\FrontendEditor\Api;
 
 
 
-use bool;
-use string;
 
-use int;
+
+
+
 use SilverStripe\Core\Injector\Injector;
 use Sunnysideup\FrontendEditor\Api\FrontEndEditorPreviousAndNextProvider;
 use Sunnysideup\FrontendEditor\Api\FrontEndEditorPreviousAndNextSequencer;

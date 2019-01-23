@@ -15,7 +15,7 @@ namespace Sunnysideup\FrontendEditor\Model;
 
 
 
-use string;
+
 
 
 use SilverStripe\Security\Member;

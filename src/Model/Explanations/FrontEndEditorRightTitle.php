@@ -7,7 +7,7 @@ namespace Sunnysideup\FrontendEditor\Model\Explanations;
 
 
 
-use string;
+
 use Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorRightTitle;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\DB;

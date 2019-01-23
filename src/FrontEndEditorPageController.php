@@ -16,8 +16,8 @@ use PageController;
 
 
 
-use bool;
-use string;
+
+
 use SilverStripe\View\Requirements;
 use SilverStripe\ORM\DataObject;
 use Sunnysideup\FrontendEditor\Api\FrontEndEditorSessionManager;

@@ -3,14 +3,14 @@
 namespace Sunnysideup\FrontendEditor\Api;
 
 
-use string;
-use bool;
 
 
 
 
 
-use int;
+
+
+
 
 use Sunnysideup\FrontendEditor\FrontEndEditorPage;
 use SilverStripe\ORM\DataObject;

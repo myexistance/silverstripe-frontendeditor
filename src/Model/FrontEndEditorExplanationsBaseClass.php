@@ -6,9 +6,9 @@ namespace Sunnysideup\FrontendEditor\Model;
 
 
 
-use string;
 
-use bool;
+
+
 use Sunnysideup\FrontendEditor\Model\FrontEndEditorExplanationsBaseClass;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\DropdownField;
