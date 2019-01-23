@@ -327,7 +327,7 @@ class FrontEndEditForm extends Form
         $actions = $this->selectActions();
         parent::__construct($controller, $name, $fields, $actions, $validator);
         Requirements::javascript(THIRDPARTY_DIR."/jquery-form/jquery.form.js");
-        Requirements::javascript("frontendeditor/javascript/FrontEndEditForm.js");
+        Requirements::javascript("sunnysideup/frontendeditor: frontendeditor/javascript/FrontEndEditForm.js");
         Requirements::customScript(
             "var FrontEndEditFormFormSelector = '#".$this->FormName()."'; ",
             "FrontEndEditFormFormSelector"
