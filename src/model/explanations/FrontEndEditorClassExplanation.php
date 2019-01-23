@@ -25,8 +25,26 @@ class FrontEndEditorClassExplanation extends FrontEndEditorExplanationsBaseClass
      *
      * @return FrontEndEditorClassExplanation
      */
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
     public static function add_or_find_item($className, $type = 'FrontEndEditorClassExplanation'): FrontEndEditorExplanationsBaseClass
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
         return parent::add_or_find_item($className, $type);
     }
 }

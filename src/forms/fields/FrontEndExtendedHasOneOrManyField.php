@@ -207,9 +207,27 @@ abstract class FrontEndExtendedHasOneOrManyField extends CompositeField
                 }
                 if (count($dropdownSource)) {
                     if ($fieldTypeClassName != "CheckboxOptionSetField") {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
                         $className = $this->getForeignClassName();
                         if ($fieldTypeClassName != "DropdownField") {
                             foreach ($dropdownSource as $id => $value) {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
                                 $object = $className::get()->byID($id);
                                 if ($object) {
                                     $dropdownSource[$id] = DBField::create_field('HTMLText', "<a href=\"".$object->FrontEndEditLink()."\">".$value."</a>");

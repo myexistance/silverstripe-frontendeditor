@@ -77,7 +77,7 @@ class FrontEndEditorPageController extends PageController
                 $this->recordBeingEdited = $model::create();
             }
         }
-        Requirements::javascript("mysite/javascript/RecentlyEdited.js");
+        Requirements::javascript("app/javascript/RecentlyEdited.js");
     }
 
     public function index()
@@ -257,7 +257,7 @@ class FrontEndEditorPageController extends PageController
      */
     public function frontendaddrelation()
     {
-        Config::inst()->update('DataObject', 'validation_enabled', false);
+        Config::modify()->update('DataObject', 'validation_enabled', false);
         $foreignObject = explode(",", $this->request->getVar("goingto"));
         $relationName = $foreignObject[0];
         $type = $this->frontEndDetermineRelationType($relationName);
@@ -325,7 +325,16 @@ class FrontEndEditorPageController extends PageController
 
     protected function redirectToRelation($obj)
     {
-        Session::save();
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: Session:: (case sensitive)
+  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+        Controller::curr()->getRequest()->getSession()->save();
         return $this->redirect($obj->FrontEndEditLink());
     }
 
@@ -349,7 +358,25 @@ class FrontEndEditorPageController extends PageController
                 if (!isset($alDone[$value])) {
                     $array = explode(",", $value);
                     if (count($array) == 2) {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
                         list($className, $id) = $array;
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
                         $obj = $className::get()->byID($id);
                         if ($obj && $obj->hasExtension('FrontEndDataExtension')) {
                             if (!$al) {
@@ -462,7 +489,25 @@ class FrontEndEditorPageController extends PageController
 
     public function startsequence($request) : SS_HTTPResponse
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
         $className = $this->request->param('ID');
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
         $startLink = $this->PreviousAndNextProvider($className)
             ->StartSequence()
             ->getPageLink();

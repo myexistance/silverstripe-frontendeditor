@@ -1,6 +1,15 @@
 <?php
 
 
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD:  extends DataExtension (ignore case)
+  * NEW:  extends DataExtension (COMPLEX)
+  * EXP: Check for use of $this->anyVar and replace with $this->anyVar[$this->owner->ID] or consider turning the class into a trait
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
 class FrontEndDataExtension extends DataExtension
 {
     public static $db = array(
@@ -104,6 +113,15 @@ class FrontEndDataExtension extends DataExtension
     {
         return FrontEndEditorClassExplanation::get()
             ->filter(
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $this->ClassName (case sensitive)
+  * NEW: $this->ClassName (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
               ['ObjectClassName' => ($this->ClassName ? $this->ClassName : get_class($this->owner))]
             )
             ->first();
@@ -182,6 +200,15 @@ class FrontEndDataExtension extends DataExtension
      */
     public function validate(ValidationResult $validationResult)
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $this->owner->class (case sensitive)
+  * NEW: $this->owner->class (COMPLEX)
+  * EXP: See: https://docs.silverstripe.org/en/4/changelogs/4.0.0#object-replace
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
         $requiredFields = Config::inst()->get($this->owner->class, 'required_fields', Config::INHERITED);
         if ($requiredFields) {
             foreach ($requiredFields as $name) {
@@ -346,6 +373,15 @@ class FrontEndDataExtension extends DataExtension
      */
     public function FrontEndDefaultSiblings($rootParent = null, $includeMe = false)
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
         $className = $this->owner->ClassName;
         if ($rootParent) {
             $myObj = $rootParent;
@@ -353,6 +389,15 @@ class FrontEndDataExtension extends DataExtension
             $myObj = $this->owner;
         }
         $rootObjectAsString = $myObj->FrontEndRootParentObjectAsString();
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
         $list = $className::get()->filter(array("FrontEndRootCanEditObject" => $rootObjectAsString));
         if (! $includeMe) {
             $list = $list->exclude(array("ID" => $this->owner->ID));
@@ -371,8 +416,26 @@ class FrontEndDataExtension extends DataExtension
      *
      * @return DataList
      */
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
     public function FrontEndFindChildObjects($className)
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $className (case sensitive)
+  * NEW: $className (COMPLEX)
+  * EXP: Check if the class name can still be used as such
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
         return $className::get()->filter(array('FrontEndRootCanEditObject' => $this->owner->FrontEndRootCanEditObject));
     }
 
