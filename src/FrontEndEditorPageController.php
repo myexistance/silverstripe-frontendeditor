@@ -2,6 +2,16 @@
 
 namespace Sunnysideup\FrontendEditor;
 
+use PageController;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -26,6 +36,7 @@ use Sunnysideup\FrontendEditor\Api\FrontEndEditorPreviousAndNextProvider;
 
 
 require_once('/var/www/upgrades/upgradeto4/app/src/PageController.php');
+
 class FrontEndEditorPageController extends PageController
 {
 
