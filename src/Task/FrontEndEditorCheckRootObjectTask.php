@@ -135,10 +135,10 @@ class FrontEndEditorCheckRootObjectTask extends BuildTask
                         if ($obj->ClassName == $rootObjectClassName) {
                             //do nothing...
                         } elseif ($obj instanceof SiteTree) {
-                            $origStage = Versioned::current_stage();
+                            $origStage = Versioned::get_stage();
                             if ($delete) {
                                 foreach (array("Live", "Stage") as $stage) {
-                                    Versioned::reading_stage($stage);
+                                    Versioned::set_stage($stage);
                                     $record = DataObject::get_by_id(SiteTree::class, $obj->ID);
                                     
                                     $descRemoved = '';
@@ -164,9 +164,9 @@ class FrontEndEditorCheckRootObjectTask extends BuildTask
                                             $record->delete();
                                         }
                                     }
-                                    Versioned::reading_stage('Stage');
+                                    Versioned::set_stage('Stage');
                                 }
-                                Versioned::reading_stage($origStage);
+                                Versioned::set_stage($origStage);
                             } else {
                                 $obj->writeToStage("Stage");
                                 $obj->publish("Stage", "Live");
