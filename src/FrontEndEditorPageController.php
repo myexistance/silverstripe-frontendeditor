@@ -2,16 +2,6 @@
 
 namespace Sunnysideup\FrontendEditor;
 
-use PageController;
-
-
-
-
-
-
-
-
-
 
 
 
@@ -367,7 +357,7 @@ class FrontEndEditorPageController extends PageController
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         Controller::curr()->getRequest()->getSession()->save();
