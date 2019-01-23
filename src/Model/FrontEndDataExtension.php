@@ -2,22 +2,40 @@
 
 namespace Sunnysideup\FrontendEditor\Model;
 
-use DataExtension;
-use FieldList;
-use ReadonlyField;
-use GridField;
-use ArrayList;
-use GridFieldConfig_RecordEditor;
-use LiteralField;
-use FrontEndEditorClassExplanation;
-use DataObject;
-use FrontEndEditorRightTitle;
-use Config;
-use FrontEndEditorSessionManager;
-use ValidationResult;
+
+
+
+
+
+
+
+
+
+
+
+
+
 use string;
-use SiteTree;
-use DB;
+
+
+use SilverStripe\Security\Member;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\ReadonlyField;
+use SilverStripe\ORM\ArrayList;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\LiteralField;
+use Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorClassExplanation;
+use Sunnysideup\FrontendEditor\FrontEndEditorPage;
+use SilverStripe\ORM\DataObject;
+use Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorRightTitle;
+use SilverStripe\Core\Config\Config;
+use Sunnysideup\FrontendEditor\Api\FrontEndEditorSessionManager;
+use SilverStripe\ORM\ValidationResult;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\ORM\DB;
+use SilverStripe\ORM\DataExtension;
+
 
 
 
@@ -37,7 +55,7 @@ class FrontEndDataExtension extends DataExtension
     );
 
     public static $has_one = array(
-        "FrontEndEditor" => "Member"
+        "FrontEndEditor" => Member::class
     );
 
     public static $indexes = array(
@@ -152,7 +170,7 @@ class FrontEndDataExtension extends DataExtension
      */
     public function FrontEndEditLink()
     {
-        $page = DataObject::get_one('FrontEndEditorPage');
+        $page = DataObject::get_one(FrontEndEditorPage::class);
         if ($page) {
             return $page->Link("edit/".$this->owner->ClassName."/".$this->owner->ID."/");
         } elseif ($this->owner->hasMethod("CMSEditLink")) {
@@ -290,12 +308,12 @@ class FrontEndDataExtension extends DataExtension
 
     public function FrontEndRemoveRelationLink($relationField, $foreignID)
     {
-        return DataObject::get_one('FrontEndEditorPage')->FrontEndRemoveRelationLink($this->owner, $relationField, $foreignID);
+        return DataObject::get_one(FrontEndEditorPage::class)->FrontEndRemoveRelationLink($this->owner, $relationField, $foreignID);
     }
 
     public function FrontEndAddRelationLink($relationField)
     {
-        return DataObject::get_one('FrontEndEditorPage')->FrontEndAddRelationLink($this->owner, $relationField);
+        return DataObject::get_one(FrontEndEditorPage::class)->FrontEndAddRelationLink($this->owner, $relationField);
     }
 
     private static $_front_end_root_parent_object = [];

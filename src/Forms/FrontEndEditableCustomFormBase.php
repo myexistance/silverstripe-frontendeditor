@@ -2,10 +2,15 @@
 
 namespace Sunnysideup\FrontendEditor\Forms;
 
-use DataObject;
-use FrontEndEditable;
-use FieldList;
-use LiteralField;
+
+
+
+
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\ORM\DataObject;
+use Sunnysideup\FrontendEditor\Interfaces\FrontEndEditable;
+
 
 
 

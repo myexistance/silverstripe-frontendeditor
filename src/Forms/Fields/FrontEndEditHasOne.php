@@ -2,9 +2,13 @@
 
 namespace Sunnysideup\FrontendEditor\Forms\Fields;
 
-use FormField;
-use FrontEndEditable;
-use Injector;
+
+
+
+use Sunnysideup\FrontendEditor\Interfaces\FrontEndEditable;
+use SilverStripe\Core\Injector\Injector;
+use SilverStripe\Forms\FormField;
+
 
 
 /**

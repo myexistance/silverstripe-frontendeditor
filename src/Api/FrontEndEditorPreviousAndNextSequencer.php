@@ -2,16 +2,25 @@
 
 namespace Sunnysideup\FrontendEditor\Api;
 
-use ViewableData;
+
 use string;
 use bool;
-use DataObject;
-use FrontEndEditable;
-use Permission;
-use ArrayList;
-use Injector;
+
+
+
+
+
 use int;
-use SS_List;
+
+use Sunnysideup\FrontendEditor\FrontEndEditorPage;
+use SilverStripe\ORM\DataObject;
+use Sunnysideup\FrontendEditor\Interfaces\FrontEndEditable;
+use SilverStripe\Security\Permission;
+use SilverStripe\ORM\ArrayList;
+use SilverStripe\Core\Injector\Injector;
+use SilverStripe\ORM\SS_List;
+use SilverStripe\View\ViewableData;
+
 
 
 /**
@@ -134,7 +143,7 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
      */
     public function Link(): string
     {
-        $page = DataObject::get_one('FrontEndEditorPage');
+        $page = DataObject::get_one(FrontEndEditorPage::class);
         if ($page) {
             return $page->Link('startsequence/'.strtolower(get_class($this)).'/');
         }
@@ -171,7 +180,7 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
         if ($item) {
             return $item->FrontEndEditLink();
         } else {
-            $page = DataObject::get_one('FrontEndEditorPage');
+            $page = DataObject::get_one(FrontEndEditorPage::class);
             if ($page) {
                 return $page->Link();
             }

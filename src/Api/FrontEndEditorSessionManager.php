@@ -2,10 +2,13 @@
 
 namespace Sunnysideup\FrontendEditor\Api;
 
-use ViewableData;
-use Controller;
+
+
 use bool;
 use string;
+use SilverStripe\Control\Controller;
+use SilverStripe\View\ViewableData;
+
 
 
 /**
