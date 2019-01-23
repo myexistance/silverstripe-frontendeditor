@@ -2,16 +2,6 @@
 
 namespace Sunnysideup\FrontendEditor\Forms\Fields;
 
-
-
-
-
-
-
-
-
-
-
 use SilverStripe\Forms\FormField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Core\Injector\Injector;
@@ -24,8 +14,6 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\Forms\CompositeField;
-
-
 
 abstract class FrontEndExtendedHasOneOrManyField extends CompositeField
 {

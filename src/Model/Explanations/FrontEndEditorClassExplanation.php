@@ -2,12 +2,9 @@
 
 namespace Sunnysideup\FrontendEditor\Model\Explanations;
 
-
 use SilverStripe\ORM\DataObject;
 use Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorClassExplanation;
 use Sunnysideup\FrontendEditor\Model\FrontEndEditorExplanationsBaseClass;
-
-
 
 class FrontEndEditorClassExplanation extends FrontEndEditorExplanationsBaseClass
 {
@@ -35,14 +32,14 @@ class FrontEndEditorClassExplanation extends FrontEndEditorExplanationsBaseClass
      * @return FrontEndEditorClassExplanation
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public static function add_or_find_item($className, $type = FrontEndEditorClassExplanation::class): FrontEndEditorExplanationsBaseClass
     {
 

@@ -2,14 +2,8 @@
 
 namespace Sunnysideup\FrontendEditor\Api;
 
-
-
-
-
 use SilverStripe\Control\Controller;
 use SilverStripe\View\ViewableData;
-
-
 
 /**
  * holds info about the current edit session
@@ -48,19 +42,19 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         Controller::curr()->getRequest()->getSession()->set('FEE_CurrentRecordClassName', $record->ClassName);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: Session:: (case sensitive)
+          * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+          * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         Controller::curr()->getRequest()->getSession()->set('FEE_CurrentRecordID', $record->ID);
     }
 
@@ -72,39 +66,39 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $className = Controller::curr()->getRequest()->getSession()->get('FEE_CurrentRecordClassName');
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: Session:: (case sensitive)
+          * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+          * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $id = Controller::curr()->getRequest()->getSession()->get('FEE_CurrentRecordID');
 
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         return $className::get()->byID(intval($id));
     }
 
@@ -130,7 +124,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         Controller::curr()->getRequest()->getSession()->set('FormInfo.FrontEndEditForm.data', $data);
@@ -144,7 +138,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         return Controller::curr()->getRequest()->getSession()->get('FormInfo.FrontEndEditForm.data');
@@ -166,27 +160,27 @@ class FrontEndEditorSessionManager extends ViewableData
     {
         $backObjectClassName = '';
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: Session:: (case sensitive)
+          * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+          * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $sequenceNumber = Controller::curr()->getRequest()->getSession()->get('FEE_GoBackInBrowserSteps');
         if (!$sequenceNumber) {
             $sequenceNumber = 1;
         }
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: Session:: (case sensitive)
+          * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+          * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         if (count(Controller::curr()->getRequest()->getSession()->get('FEE_GoBackInBrowserSteps'))) {
 
 /**
@@ -194,7 +188,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
             $data = explode(",", Controller::curr()->getRequest()->getSession()->get('FEE_GoBackInBrowserStepsDetails'.$sequenceNumber));
@@ -203,34 +197,34 @@ class FrontEndEditorSessionManager extends ViewableData
         if ($backObjectClassName != $object->ClassName) {
             $sequenceNumber++;
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: Session:: (case sensitive)
+              * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+              * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             Controller::curr()->getRequest()->getSession()->set('FEE_GoBackInBrowserSteps', $sequenceNumber);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: Session:: (case sensitive)
+              * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+              * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             Controller::curr()->getRequest()->getSession()->set('FEE_GoBackInBrowserStepsDetails'.$sequenceNumber, $object->ClassName.",".$object->ID);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: Session:: (case sensitive)
+              * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+              * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             Controller::curr()->getRequest()->getSession()->save();
         }
     }
@@ -243,7 +237,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         return Controller::curr()->getRequest()->getSession()->get('FEE_GoBackInBrowserSteps');
@@ -257,7 +251,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         return Controller::curr()->getRequest()->getSession()->get('FEE_GoBackInBrowserStepsDetails'.$number);
@@ -278,19 +272,19 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         $sequenceNumber = Controller::curr()->getRequest()->getSession()->get('FEE_GoBackInBrowserSteps')-1;
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: Session:: (case sensitive)
+          * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+          * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $data = explode(",", Controller::curr()->getRequest()->getSession()->get('FEE_GoBackInBrowserStepsDetails'.$sequenceNumber));
         if (count($data) != 2) {
             $data = array("", "");
@@ -322,39 +316,39 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         $sequenceNumber = Controller::curr()->getRequest()->getSession()->get('FEE_GoBackInBrowserSteps');
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: Session:: (case sensitive)
+          * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+          * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         Controller::curr()->getRequest()->getSession()->set('FEE_GoBackInBrowserSteps', $sequenceNumber - 1);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: Session:: (case sensitive)
+          * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+          * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         Controller::curr()->getRequest()->getSession()->clear('FEE_GoBackInBrowserStepsDetails'.$sequenceNumber);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: Session:: (case sensitive)
+          * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+          * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         Controller::curr()->getRequest()->getSession()->save();
     }
 
@@ -401,7 +395,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
             $objectString = Controller::curr()->getRequest()->getSession()->get('FEE_canEditObject');
@@ -423,14 +417,14 @@ class FrontEndEditorSessionManager extends ViewableData
     {
         $string = self::object_to_string($object);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: Session:: (case sensitive)
+          * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+          * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $objectString = Controller::curr()->getRequest()->getSession()->set('FEE_canEditObject', $string);
         self::$_can_edit_object = $object;
 
@@ -443,14 +437,14 @@ class FrontEndEditorSessionManager extends ViewableData
      * @return DataList
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public static function editable_lists_based_on_can_edit($className)
     {
 
@@ -495,14 +489,14 @@ class FrontEndEditorSessionManager extends ViewableData
     ###
 
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public static function set_sequencer($className)
     {
 
@@ -511,18 +505,18 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         Controller::curr()->getRequest()->getSession()->set('FEE_SequencerClassName', $className);
     }
 
@@ -539,7 +533,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         return Controller::curr()->getRequest()->getSession()->get('FEE_SequencerClassName');
@@ -557,7 +551,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         return Controller::curr()->getRequest()->getSession()->set('FEE_SequencerNoteCurrentRecord', $bool);
@@ -584,7 +578,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         return Controller::curr()->getRequest()->getSession()->get('FEE_SequencerNoteCurrentRecord') ? true : false;
@@ -600,7 +594,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
             Controller::curr()->getRequest()->getSession()->set(
@@ -620,7 +614,7 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
         $string = Controller::curr()->getRequest()->getSession()->get(
@@ -672,14 +666,14 @@ class FrontEndEditorSessionManager extends ViewableData
             list($className, $id) = explode(',', $string);
 
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: $className (case sensitive)
+              * NEW: $className (COMPLEX)
+              * EXP: Check if the class name can still be used as such
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             return $className::get()->byID(intval($id));
         }
     }
@@ -693,39 +687,39 @@ class FrontEndEditorSessionManager extends ViewableData
   * WHY: upgrade to SS4
   * OLD: Session:: (case sensitive)
   * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
+  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
             Controller::curr()->getRequest()->getSession()->set($variable, '');
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: Session:: (case sensitive)
+              * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+              * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             Controller::curr()->getRequest()->getSession()->set($variable, null);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: Session:: (case sensitive)
+              * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+              * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             Controller::curr()->getRequest()->getSession()->clear($variable);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: Session:: (case sensitive)
-  * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
-  * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly. 
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: Session:: (case sensitive)
+              * NEW: Controller::curr()->getRequest()->getSession()-> (COMPLEX)
+              * EXP: If THIS is a controller than you can write: $this->getRequest(). You can also try to access the HTTPRequest directly.
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             Controller::curr()->getRequest()->getSession()->save();
         }
     }

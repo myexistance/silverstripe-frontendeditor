@@ -2,13 +2,10 @@
 
 namespace Sunnysideup\FrontendEditor\Cms;
 
-
 use Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorSequencerExplanation;
 use Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorClassExplanation;
 use Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorRightTitle;
 use SilverStripe\Admin\ModelAdmin;
-
-
 
 /**
  * This is the modeladmin for the providers

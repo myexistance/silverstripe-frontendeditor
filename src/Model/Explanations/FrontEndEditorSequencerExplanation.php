@@ -2,11 +2,8 @@
 
 namespace Sunnysideup\FrontendEditor\Model\Explanations;
 
-
 use Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorSequencerExplanation;
 use Sunnysideup\FrontendEditor\Model\FrontEndEditorExplanationsBaseClass;
-
-
 
 class FrontEndEditorSequencerExplanation extends FrontEndEditorExplanationsBaseClass
 {
@@ -34,14 +31,14 @@ class FrontEndEditorSequencerExplanation extends FrontEndEditorExplanationsBaseC
      * @return FrontEndEditorSequencerExplanation
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public static function add_or_find_item($className, $type = FrontEndEditorSequencerExplanation::class): FrontEndEditorExplanationsBaseClass
     {
 

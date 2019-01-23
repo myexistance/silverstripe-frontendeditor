@@ -2,20 +2,12 @@
 
 namespace Sunnysideup\FrontendEditor\Model\Explanations;
 
-
-
-
-
-
-
 use Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorRightTitle;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\DB;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\ReadonlyField;
 use Sunnysideup\FrontendEditor\Model\FrontEndEditorExplanationsBaseClass;
-
-
 
 class FrontEndEditorRightTitle extends FrontEndEditorExplanationsBaseClass
 {
@@ -53,14 +45,14 @@ class FrontEndEditorRightTitle extends FrontEndEditorExplanationsBaseClass
      * @return array
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public static function get_entered_ones($className)
     {
         $array = [];
@@ -92,14 +84,14 @@ class FrontEndEditorRightTitle extends FrontEndEditorExplanationsBaseClass
      * @return FrontEndEditorRightTitle
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public static function add_or_find_field($className, $fieldName, $defaultValue = "")
     {
         $filter = array(
@@ -167,24 +159,24 @@ class FrontEndEditorRightTitle extends FrontEndEditorExplanationsBaseClass
         foreach ($rows as $row) {
             $combo = $row['COMBO'];
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: $className (case sensitive)
+              * NEW: $className (COMPLEX)
+              * EXP: Check if the class name can still be used as such
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             list($className, $fieldName) = explode(',', $combo);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: $className (case sensitive)
+              * NEW: $className (COMPLEX)
+              * EXP: Check if the class name can still be used as such
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             if ($className && $fieldName) {
 
 /**
@@ -246,14 +238,14 @@ class FrontEndEditorRightTitle extends FrontEndEditorExplanationsBaseClass
     private static $_cache_for_field_labels = [];
 
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function getFieldNameNice($className = null, $fieldName = null)
     {
 
@@ -281,14 +273,14 @@ class FrontEndEditorRightTitle extends FrontEndEditorExplanationsBaseClass
             $fieldName = $this->ObjectFieldName;
         }
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         if (!isset(self::$_cache_for_field_labels[$className])) {
 
 /**
@@ -313,14 +305,14 @@ class FrontEndEditorRightTitle extends FrontEndEditorExplanationsBaseClass
             }
         }
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         if (isset(self::$_cache_for_field_labels[$className])) {
 
 /**

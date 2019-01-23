@@ -2,16 +2,6 @@
 
 namespace Sunnysideup\FrontendEditor\Api;
 
-
-
-
-
-
-
-
-
-
-
 use SilverStripe\Core\Injector\Injector;
 use Sunnysideup\FrontendEditor\Api\FrontEndEditorPreviousAndNextProvider;
 use Sunnysideup\FrontendEditor\Api\FrontEndEditorPreviousAndNextSequencer;
@@ -21,8 +11,6 @@ use Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorSequencerExplana
 use SilverStripe\View\ArrayData;
 use Sunnysideup\FrontendEditor\Interfaces\FrontEndEditable;
 use SilverStripe\View\ViewableData;
-
-
 
 /**
  *
@@ -86,14 +74,14 @@ class FrontEndEditorPreviousAndNextProvider extends ViewableData
         $currentSequencerClassName = $this->getClassName();
         $al = ArrayList::create();
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         foreach ($list as $className) {
 
 /**
@@ -150,27 +138,27 @@ class FrontEndEditorPreviousAndNextProvider extends ViewableData
      * @return FrontEndEditorPreviousAndNextProvider
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function setSequenceProvider($className) : FrontEndEditorPreviousAndNextProvider
     {
         $list = ClassInfo::subclassesFor(FrontEndEditorPreviousAndNextSequencer::class);
         $list = array_change_key_case($list);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         if (isset($list[$className]) && $className !== FrontEndEditorPreviousAndNextSequencer::class) {
 
 /**
@@ -183,24 +171,24 @@ class FrontEndEditorPreviousAndNextProvider extends ViewableData
   */
             $className = $list[$className];
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: $className (case sensitive)
+              * NEW: $className (COMPLEX)
+              * EXP: Check if the class name can still be used as such
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             $this->sequencerClassName = $className;
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: $className (case sensitive)
+              * NEW: $className (COMPLEX)
+              * EXP: Check if the class name can still be used as such
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             FrontEndEditorSessionManager::set_sequencer($className);
         } else {
 
@@ -295,14 +283,14 @@ class FrontEndEditorPreviousAndNextProvider extends ViewableData
   */
             $className = $this->getClassName();
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+            /**
+              * ### @@@@ START REPLACEMENT @@@@ ###
+              * WHY: upgrade to SS4
+              * OLD: $className (case sensitive)
+              * NEW: $className (COMPLEX)
+              * EXP: Check if the class name can still be used as such
+              * ### @@@@ STOP REPLACEMENT @@@@ ###
+              */
             if ($className) {
 
 /**
@@ -439,14 +427,14 @@ class FrontEndEditorPreviousAndNextProvider extends ViewableData
      * @return ArrayList
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function AllPages($className = null) : ArrayList
     {
 
@@ -468,14 +456,14 @@ class FrontEndEditorPreviousAndNextProvider extends ViewableData
      * @return FrontEndEditable|null
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function AddAnotherOfThisClass($className = null)
     {
 
@@ -497,14 +485,14 @@ class FrontEndEditorPreviousAndNextProvider extends ViewableData
      * @return bool
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function HasNextPage($className = null) : bool
     {
 
@@ -573,14 +561,14 @@ class FrontEndEditorPreviousAndNextProvider extends ViewableData
      * @return bool
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function HasPreviousPage($className = null) : bool
     {
 
@@ -675,14 +663,14 @@ class FrontEndEditorPreviousAndNextProvider extends ViewableData
      * @return FrontEndEditable|null
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     protected function CanAddAnotherOfThisClass($className, $currentRecordIsNew = false) : bool
     {
 

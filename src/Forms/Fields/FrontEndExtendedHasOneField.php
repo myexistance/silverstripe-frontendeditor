@@ -2,14 +2,10 @@
 
 namespace Sunnysideup\FrontendEditor\Forms\Fields;
 
-
-
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\CompositeField;
 use Sunnysideup\FrontendEditor\Model\FrontEndDataExtension;
 use SilverStripe\Forms\LiteralField;
-
-
 
 class FrontEndExtendedHasOneField extends FrontEndExtendedHasOneOrManyField
 {

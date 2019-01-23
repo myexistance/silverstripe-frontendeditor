@@ -2,12 +2,6 @@
 
 namespace Sunnysideup\FrontendEditor\Task;
 
-
-
-
-
-
-
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Core\ClassInfo;
@@ -15,9 +9,6 @@ use Sunnysideup\FrontendEditor\Interfaces\FrontEndEditable;
 use SilverStripe\Versioned\Versioned;
 use SilverStripe\ORM\DB;
 use SilverStripe\Dev\BuildTask;
-
-
-
 
 class FrontEndEditorCheckRootObjectTask extends BuildTask
 {
@@ -38,14 +29,14 @@ class FrontEndEditorCheckRootObjectTask extends BuildTask
         increase_memory_limit_to('512M');
         $array = ClassInfo::subclassesFor(DataObject::class);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         foreach ($array as $key => $className) {
 
 /**
@@ -68,14 +59,14 @@ class FrontEndEditorCheckRootObjectTask extends BuildTask
   */
                 $objects = $className::get();
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+                /**
+                  * ### @@@@ START REPLACEMENT @@@@ ###
+                  * WHY: upgrade to SS4
+                  * OLD: $className (case sensitive)
+                  * NEW: $className (COMPLEX)
+                  * EXP: Check if the class name can still be used as such
+                  * ### @@@@ STOP REPLACEMENT @@@@ ###
+                  */
                 echo "<h2>".$className."</h2>";
                 foreach ($objects as $obj) {
                     $save = false;
@@ -98,14 +89,14 @@ class FrontEndEditorCheckRootObjectTask extends BuildTask
                         $className = $array[0];
                         $id = $array[1];
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+                        /**
+                          * ### @@@@ START REPLACEMENT @@@@ ###
+                          * WHY: upgrade to SS4
+                          * OLD: $className (case sensitive)
+                          * NEW: $className (COMPLEX)
+                          * EXP: Check if the class name can still be used as such
+                          * ### @@@@ STOP REPLACEMENT @@@@ ###
+                          */
                         if (!class_exists($className)) {
                             $save = true;
                         }

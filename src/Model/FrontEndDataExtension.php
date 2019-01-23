@@ -2,22 +2,6 @@
 
 namespace Sunnysideup\FrontendEditor\Model;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 use SilverStripe\Security\Member;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\ReadonlyField;
@@ -35,10 +19,6 @@ use SilverStripe\ORM\ValidationResult;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\ORM\DB;
 use SilverStripe\ORM\DataExtension;
-
-
-
-
 
 /**
   * ### @@@@ START REPLACEMENT @@@@ ###
@@ -428,14 +408,14 @@ class FrontEndDataExtension extends DataExtension
         }
         $rootObjectAsString = $myObj->FrontEndRootParentObjectAsString();
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $list = $className::get()->filter(array("FrontEndRootCanEditObject" => $rootObjectAsString));
         if (! $includeMe) {
             $list = $list->exclude(array("ID" => $this->owner->ID));
@@ -455,14 +435,14 @@ class FrontEndDataExtension extends DataExtension
      * @return DataList
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function FrontEndFindChildObjects($className)
     {
 

@@ -4,8 +4,6 @@ namespace Sunnysideup\FrontendEditor;
 
 use Page;
 
-
-
 class FrontEndEditorPage extends Page
 {
     private static $icon = "frontendeditor/images/treeicons/FrontEndEditorPage";
@@ -75,14 +73,14 @@ class FrontEndEditorPage extends Page
      * @return string
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function FrontEndEditLinkFast($className, $id)
     {
         return $this->Link(

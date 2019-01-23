@@ -34,7 +34,6 @@ use SilverStripe\Control\Controller;
 use Sunnysideup\FrontendEditor\Model\FrontEndDataExtension;
 use Sunnysideup\FrontendEditor\Api\FrontEndEditorPreviousAndNextProvider;
 
-
 require_once('/var/www/upgrades/upgradeto4/app/src/PageController.php');
 
 class FrontEndEditorPageController extends PageController
@@ -406,14 +405,14 @@ class FrontEndEditorPageController extends PageController
   */
                         list($className, $id) = $array;
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+                        /**
+                          * ### @@@@ START REPLACEMENT @@@@ ###
+                          * WHY: upgrade to SS4
+                          * OLD: $className (case sensitive)
+                          * NEW: $className (COMPLEX)
+                          * EXP: Check if the class name can still be used as such
+                          * ### @@@@ STOP REPLACEMENT @@@@ ###
+                          */
                         $obj = $className::get()->byID($id);
                         if ($obj && $obj->hasExtension(FrontEndDataExtension::class)) {
                             if (!$al) {
@@ -537,14 +536,14 @@ class FrontEndEditorPageController extends PageController
   */
         $className = $this->request->param('ID');
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $startLink = $this->PreviousAndNextProvider($className)
             ->StartSequence()
             ->getPageLink();

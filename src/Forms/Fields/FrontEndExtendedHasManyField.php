@@ -2,14 +2,10 @@
 
 namespace Sunnysideup\FrontendEditor\Forms\Fields;
 
-
-
 use SilverStripe\Forms\CheckboxSetField;
 use Sunnysideup\FrontendEditor\Model\FrontEndDataExtension;
 use SilverStripe\ORM\SS_List;
 use SilverStripe\Forms\LiteralField;
-
-
 
 class FrontEndExtendedHasManyField extends FrontEndExtendedHasOneOrManyField
 {

@@ -2,16 +2,6 @@
 
 namespace Sunnysideup\FrontendEditor\Api;
 
-
-
-
-
-
-
-
-
-
-
 use Sunnysideup\FrontendEditor\FrontEndEditorPage;
 use SilverStripe\ORM\DataObject;
 use Sunnysideup\FrontendEditor\Interfaces\FrontEndEditable;
@@ -20,8 +10,6 @@ use SilverStripe\ORM\ArrayList;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\ORM\SS_List;
 use SilverStripe\View\ViewableData;
-
-
 
 /**
  *
@@ -75,14 +63,14 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
      * @return array
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     abstract public function ArrayOfClassesToSequence($className = null) : array;
 
     /**
@@ -128,14 +116,14 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
      * @return FrontEndEditable|null
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     abstract public function AddAnotherOfThisClass($className);
 
     /**
@@ -204,14 +192,14 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
      * @return ArrayList
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function AllPages($className = null) : ArrayList
     {
         if ($this->_allPages === null) {
@@ -272,14 +260,14 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
     }
 
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function CountForClassName($className)
     {
 
@@ -303,27 +291,27 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
      * @return int
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function CurrentRecordPositionInSequence($className = null) : int
     {
         $position = 0;
         $currentRecordBeingEdited = $this->getCurrentRecordBeingEdited();
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $allPages = $this->AllPages($className);
         foreach ($allPages as $count => $page) {
             if ($page->FrontEndUID() === $currentRecordBeingEdited->FrontEndUID()) {
@@ -429,14 +417,14 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
      * @return bool
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function MustAddAnotherOfThisClass($className) : bool
     {
 
@@ -450,14 +438,14 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
   */
         $existingChildren = $this->FrontEndFindChildObjects($className);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $config = $this->ArrayOfClassesToSequence($className);
         $count = $existingChildren->count();
 
@@ -473,14 +461,14 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
      * @return bool
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function CanAddAnotherOfThisClass($className, $currentRecordIsNew = false) : bool
     {
 
@@ -494,14 +482,14 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
   */
         $existingChildren = $this->FrontEndFindChildObjects($className);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $config = $this->ArrayOfClassesToSequence($className);
         $count = $existingChildren->count();
         if ($currentRecordIsNew) {
@@ -521,14 +509,14 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
      * @return ArrayList
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function FrontEndFindChildObjects($className) : SS_List
     {
 
@@ -556,26 +544,26 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
 
                 //exception for the root parent itself ...
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+                /**
+                  * ### @@@@ START REPLACEMENT @@@@ ###
+                  * WHY: upgrade to SS4
+                  * OLD: $className (case sensitive)
+                  * NEW: $className (COMPLEX)
+                  * EXP: Check if the class name can still be used as such
+                  * ### @@@@ STOP REPLACEMENT @@@@ ###
+                  */
                 if ($rootParent->ClassName === $className) {
                     $al = ArrayList::create();
                     $al->push($rootParent);
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+                    /**
+                      * ### @@@@ START REPLACEMENT @@@@ ###
+                      * WHY: upgrade to SS4
+                      * OLD: $className (case sensitive)
+                      * NEW: $className (COMPLEX)
+                      * EXP: Check if the class name can still be used as such
+                      * ### @@@@ STOP REPLACEMENT @@@@ ###
+                      */
                     self::$_child_object_cache[$className] = $al;
                 } else {
 
@@ -605,14 +593,14 @@ abstract class FrontEndEditorPreviousAndNextSequencer extends ViewableData
         }
 
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         return self::$_child_object_cache[$className];
     }
 

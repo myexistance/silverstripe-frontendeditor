@@ -2,16 +2,6 @@
 
 namespace Sunnysideup\FrontendEditor\Forms;
 
-
-
-
-
-
-
-
-
-
-
 use DataObjectOneFieldUpdateController;
 
 
@@ -49,9 +39,6 @@ use Sunnysideup\FrontendEditor\Interfaces\FrontEndEditable;
 use Sunnysideup\FrontendEditor\Model\FrontEndDataExtension;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Forms\Form;
-
-
-
 
 class FrontEndEditForm extends Form
 {
@@ -621,14 +608,14 @@ class FrontEndEditForm extends Form
      * @return bool
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function HasNextPage($className = null) : bool
     {
         if ($this->controller->HasSequence()) {
@@ -657,14 +644,14 @@ class FrontEndEditForm extends Form
      * @return bool
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public function HasPreviousPage($className = null) : bool
     {
         if ($this->controller->HasSequence()) {
@@ -768,14 +755,14 @@ class FrontEndEditForm extends Form
         }
         $id = 0;
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         $className = "";
         if (isset($data["IDToUse"])) {
             $id = $data["IDToUse"];
@@ -793,14 +780,14 @@ class FrontEndEditForm extends Form
             $className = $data["ClassNameToUse"];
         }
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+        /**
+          * ### @@@@ START REPLACEMENT @@@@ ###
+          * WHY: upgrade to SS4
+          * OLD: $className (case sensitive)
+          * NEW: $className (COMPLEX)
+          * EXP: Check if the class name can still be used as such
+          * ### @@@@ STOP REPLACEMENT @@@@ ###
+          */
         if ($className) {
 
 /**
@@ -841,14 +828,14 @@ class FrontEndEditForm extends Form
   */
                     $className = $data["ClassNameToUse"];
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+                    /**
+                      * ### @@@@ START REPLACEMENT @@@@ ###
+                      * WHY: upgrade to SS4
+                      * OLD: $className (case sensitive)
+                      * NEW: $className (COMPLEX)
+                      * EXP: Check if the class name can still be used as such
+                      * ### @@@@ STOP REPLACEMENT @@@@ ###
+                      */
                     if ($className && class_exists($className)) {
                         $obj = Injector::inst()->get("Provider");
                         if ($obj->hasExtension(FrontEndDataExtension::class)) {

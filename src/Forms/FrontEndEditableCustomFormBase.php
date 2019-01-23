@@ -2,18 +2,10 @@
 
 namespace Sunnysideup\FrontendEditor\Forms;
 
-
-
-
-
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\ORM\DataObject;
 use Sunnysideup\FrontendEditor\Interfaces\FrontEndEditable;
-
-
-
-
 
 class FrontEndEditableCustomFormBase extends DataObject implements FrontEndEditable
 {
@@ -26,14 +18,14 @@ class FrontEndEditableCustomFormBase extends DataObject implements FrontEndEdita
      * @return FrontEndEditable
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: $className (case sensitive)
-  * NEW: $className (COMPLEX)
-  * EXP: Check if the class name can still be used as such
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+      * ### @@@@ START REPLACEMENT @@@@ ###
+      * WHY: upgrade to SS4
+      * OLD: $className (case sensitive)
+      * NEW: $className (COMPLEX)
+      * EXP: Check if the class name can still be used as such
+      * ### @@@@ STOP REPLACEMENT @@@@ ###
+      */
     public static function add_another($rootParentObject, $className, $sibling = null, $params)
     {
         return null;
