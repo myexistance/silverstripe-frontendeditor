@@ -1,5 +1,25 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor;
+
+use PageController;
+use Requirements;
+use FrontEndEditorSessionManager;
+use FrontEndEditForm;
+use ArrayList;
+use ArrayData;
+use FrontEndEditable;
+use Permission;
+use Director;
+use Config;
+use SiteTree;
+use Controller;
+use SS_HTTPResponse;
+use FrontEndEditorPreviousAndNextProvider;
+use bool;
+use string;
+
+
 class FrontEndEditorPageController extends PageController
 {
 

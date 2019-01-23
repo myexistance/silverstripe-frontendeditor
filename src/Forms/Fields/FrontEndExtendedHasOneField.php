@@ -1,5 +1,11 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Forms\Fields;
+
+use CompositeField;
+use LiteralField;
+
+
 class FrontEndExtendedHasOneField extends FrontEndExtendedHasOneOrManyField
 {
 

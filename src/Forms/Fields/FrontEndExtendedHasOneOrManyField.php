@@ -1,5 +1,19 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Forms\Fields;
+
+use CompositeField;
+use LiteralField;
+use Injector;
+use HiddenField;
+use FormField;
+use SS_Map;
+use SS_List;
+use FrontEndEditable;
+use DataObject;
+use DBField;
+
+
 abstract class FrontEndExtendedHasOneOrManyField extends CompositeField
 {
 

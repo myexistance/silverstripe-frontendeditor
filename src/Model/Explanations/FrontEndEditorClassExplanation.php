@@ -1,5 +1,10 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Model\Explanations;
+
+use FrontEndEditorExplanationsBaseClass;
+
+
 class FrontEndEditorClassExplanation extends FrontEndEditorExplanationsBaseClass
 {
     private static $field_labels = array(

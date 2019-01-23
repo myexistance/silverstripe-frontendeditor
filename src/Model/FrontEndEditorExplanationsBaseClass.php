@@ -1,5 +1,16 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Model;
+
+use DataObject;
+use DropdownField;
+use TextField;
+use ReadonlyField;
+use string;
+use Injector;
+use bool;
+
+
 class FrontEndEditorExplanationsBaseClass extends DataObject
 {
     private static $db = array(

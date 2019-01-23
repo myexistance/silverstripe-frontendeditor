@@ -1,5 +1,32 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Forms;
+
+use Form;
+use FrontEndEditorSessionManager;
+use LiteralField;
+use FrontEndExtendedHasOneField;
+use Config;
+use FrontEndExtendedHasManyField;
+use FrontEndEditorClassExplanation;
+use FrontEndEditorRightTitle;
+use CheckboxField;
+use GridField;
+use DataObjectOneFieldUpdateController;
+use HiddenField;
+use CheckboxSetField;
+use RequiredFields;
+use Requirements;
+use FieldList;
+use FormAction;
+use DateField;
+use SiteTree;
+use Director;
+use bool;
+use FrontEndEditable;
+use Injector;
+
+
 
 class FrontEndEditForm extends Form
 {

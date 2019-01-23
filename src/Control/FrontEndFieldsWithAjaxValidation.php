@@ -1,5 +1,15 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Control;
+
+use ContentController;
+use Convert;
+use DataObject;
+use Security;
+use bool;
+use Injector;
+
+
 
 
 class FrontEndFieldsWithAjaxValidation extends ContentController

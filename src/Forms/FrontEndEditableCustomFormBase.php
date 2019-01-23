@@ -1,5 +1,13 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Forms;
+
+use DataObject;
+use FrontEndEditable;
+use FieldList;
+use LiteralField;
+
+
 
 
 class FrontEndEditableCustomFormBase extends DataObject implements FrontEndEditable

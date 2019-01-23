@@ -1,5 +1,10 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Interfaces;
+
+
+
+
 
 
 interface FrontEndEditable

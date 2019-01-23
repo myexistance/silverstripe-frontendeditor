@@ -1,5 +1,25 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Model;
+
+use DataExtension;
+use FieldList;
+use ReadonlyField;
+use GridField;
+use ArrayList;
+use GridFieldConfig_RecordEditor;
+use LiteralField;
+use FrontEndEditorClassExplanation;
+use DataObject;
+use FrontEndEditorRightTitle;
+use Config;
+use FrontEndEditorSessionManager;
+use ValidationResult;
+use string;
+use SiteTree;
+use DB;
+
+
 
 
 /**

@@ -1,5 +1,19 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Api;
+
+use ViewableData;
+use string;
+use bool;
+use DataObject;
+use FrontEndEditable;
+use Permission;
+use ArrayList;
+use Injector;
+use int;
+use SS_List;
+
+
 /**
  *
  * this class can be extended for building a custom sequence

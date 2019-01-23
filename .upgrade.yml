@@ -1,0 +1,21 @@
+mappings:
+  FrontEndEditorPreviousAndNextProvider: Sunnysideup\FrontendEditor\Api\FrontEndEditorPreviousAndNextProvider
+  FrontEndEditorPreviousAndNextSequencer: Sunnysideup\FrontendEditor\Api\FrontEndEditorPreviousAndNextSequencer
+  FrontEndEditorSessionManager: Sunnysideup\FrontendEditor\Api\FrontEndEditorSessionManager
+  FrontEndEditorPageController: Sunnysideup\FrontendEditor\FrontEndEditorPageController
+  FrontEndEditorPage: Sunnysideup\FrontendEditor\FrontEndEditorPage
+  FrontEndFieldsWithAjaxValidation: Sunnysideup\FrontendEditor\Control\FrontEndFieldsWithAjaxValidation
+  FrontEndEditorAdmin: Sunnysideup\FrontendEditor\Cms\FrontEndEditorAdmin
+  FrontEndEditorCheckRootObjectTask: Sunnysideup\FrontendEditor\Task\FrontEndEditorCheckRootObjectTask
+  FrontEndEditorSequencerExplanation: Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorSequencerExplanation
+  FrontEndEditorRightTitle: Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorRightTitle
+  FrontEndEditorClassExplanation: Sunnysideup\FrontendEditor\Model\Explanations\FrontEndEditorClassExplanation
+  FrontEndEditorExplanationsBaseClass: Sunnysideup\FrontendEditor\Model\FrontEndEditorExplanationsBaseClass
+  FrontEndDataExtension: Sunnysideup\FrontendEditor\Model\FrontEndDataExtension
+  FrontEndEditable: Sunnysideup\FrontendEditor\Interfaces\FrontEndEditable
+  FrontEndEditableCustomFormBase: Sunnysideup\FrontendEditor\Forms\FrontEndEditableCustomFormBase
+  FrontEndEditForm: Sunnysideup\FrontendEditor\Forms\FrontEndEditForm
+  FrontEndExtendedHasOneOrManyField: Sunnysideup\FrontendEditor\Forms\Fields\FrontEndExtendedHasOneOrManyField
+  FrontEndExtendedHasOneField: Sunnysideup\FrontendEditor\Forms\Fields\FrontEndExtendedHasOneField
+  FrontEndEditHasOne: Sunnysideup\FrontendEditor\Forms\Fields\FrontEndEditHasOne
+  FrontEndExtendedHasManyField: Sunnysideup\FrontendEditor\Forms\Fields\FrontEndExtendedHasManyField

@@ -1,5 +1,19 @@
 <?php
 
+namespace Sunnysideup\FrontendEditor\Api;
+
+use ViewableData;
+use Injector;
+use ArrayList;
+use ClassInfo;
+use FrontEndEditorSequencerExplanation;
+use ArrayData;
+use bool;
+use string;
+use FrontEndEditable;
+use int;
+
+
 /**
  *
  * this class manages the previous and next step
