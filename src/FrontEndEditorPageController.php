@@ -25,8 +25,8 @@ use Sunnysideup\FrontendEditor\Model\FrontEndDataExtension;
 use Sunnysideup\FrontendEditor\Api\FrontEndEditorPreviousAndNextProvider;
 
 
-
-class FrontEndEditorPageController extends \PageController
+require_once('/var/www/upgrades/upgradeto4/app/src/PageController.php');
+class FrontEndEditorPageController extends PageController
 {
 
 
